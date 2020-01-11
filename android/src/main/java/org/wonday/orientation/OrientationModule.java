@@ -128,6 +128,11 @@ public class OrientationModule extends ReactContextBaseJavaModule implements Lif
         return "Orientation";
     }
 
+      @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  }
+
     private String getCurrentOrientation() {
 
         final Display display = ((WindowManager) getReactApplicationContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
